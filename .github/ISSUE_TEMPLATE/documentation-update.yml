@@ -1,0 +1,91 @@
+name: 📝 Documentation Update
+description: Request updates or corrections to documentation files
+title: "[Docs]: "
+labels: ["documentation"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request updates to documentation to keep it accurate and helpful.
+        
+  - type: dropdown
+    id: doc-file
+    attributes:
+      label: Which documentation needs updating?
+      description: Select the document(s) that need changes
+      multiple: true
+      options:
+        - README.md (main)
+        - src/README.md
+        - docs/how-to-develop.md
+        - API Documentation
+        - Code Comments
+        - Other documentation
+    validations:
+      required: true
+      
+  - type: textarea
+    id: issue
+    attributes:
+      label: What's wrong or outdated?
+      description: Describe what information is incorrect, missing, or outdated
+      placeholder: The documentation says... but actually...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it say instead?
+      description: Provide the correct or updated information
+      placeholder: It should explain that...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: location
+    attributes:
+      label: Specific Location
+      description: Where in the document is the issue? (section, heading, line number if known)
+      placeholder: |
+        - Section: "Getting Started"
+        - Near the heading "Usage"
+        - Line 25 in README.md
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Type of Update
+      description: What kind of documentation update is this?
+      options:
+        - Correction (fix wrong info)
+        - Addition (add missing info)
+        - Removal (delete outdated info)
+        - Reorganization (improve structure)
+        - Clarification (make clearer)
+    validations:
+      required: true
+      
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What needs to be updated to consider this complete?
+      placeholder: |
+        - [ ] Update API endpoint documentation to reflect new parameters
+        - [ ] Add examples for teacher login
+        - [ ] Remove references to old features
+    validations:
+      required: true
+      
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any other helpful information
+      placeholder: This became outdated when... / Users are confused about...
+    validations:
+      required: false

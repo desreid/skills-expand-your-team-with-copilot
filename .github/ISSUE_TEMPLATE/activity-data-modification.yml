@@ -1,0 +1,119 @@
+name: 📊 Activity/Data Modification
+description: Add, modify, or remove activities or update activity data
+title: "[Data]: "
+labels: ["data", "enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request changes to activities, student data, or other information in the system.
+        
+  - type: dropdown
+    id: action-type
+    attributes:
+      label: What type of change?
+      description: Select the type of modification needed
+      options:
+        - Add new activity
+        - Modify existing activity
+        - Remove activity
+        - Change activity schedule
+        - Update activity capacity
+        - Modify activity description
+        - Add new data field to activities
+        - Other data change
+    validations:
+      required: true
+      
+  - type: textarea
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: Which activity is this about? (or name of new activity)
+      placeholder: Chess Club, Programming Class, etc.
+    validations:
+      required: true
+      
+  - type: textarea
+    id: current-data
+    attributes:
+      label: Current Data (if modifying)
+      description: What is the current state of the activity or data?
+      placeholder: |
+        Currently:
+        - Schedule: Mondays 3:00 PM - 4:30 PM
+        - Capacity: 15 students
+        - Description: Learn chess strategies
+    validations:
+      required: false
+      
+  - type: textarea
+    id: desired-data
+    attributes:
+      label: Desired Data
+      description: What should the activity data be changed to? For new activities, provide all details.
+      placeholder: |
+        Should be:
+        - Description: [activity description]
+        - Schedule: [day(s) and time]
+        - Maximum participants: [number]
+        - Any other relevant details
+    validations:
+      required: true
+      
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Change
+      description: Why is this change needed?
+      placeholder: Students have requested... / Schedule conflict with... / New program starting...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: schedule-details
+    attributes:
+      label: Schedule Details (if applicable)
+      description: Provide specific schedule information
+      placeholder: |
+        - Days: Monday, Wednesday
+        - Start time: 15:15 (3:15 PM)
+        - End time: 16:45 (4:45 PM)
+    validations:
+      required: false
+      
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we verify this change was made correctly?
+      placeholder: |
+        - [ ] Activity appears in the list with correct name
+        - [ ] Schedule displays correctly
+        - [ ] Maximum capacity is set to [number]
+        - [ ] Students can register for the activity
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      description: How soon is this change needed?
+      options:
+        - Not urgent
+        - Before next week
+        - Before next activity session
+        - Urgent (immediate)
+    validations:
+      required: true
+      
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical Notes
+      description: Any specific requirements or database considerations? (Optional)
+      placeholder: This affects the database.py file, initial_activities dictionary...
+    validations:
+      required: false
