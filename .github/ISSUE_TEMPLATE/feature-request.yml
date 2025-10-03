@@ -1,0 +1,100 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement for the activities website
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide as much detail as possible to help us understand your request.
+        
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Need
+      description: Is your feature request related to a problem? Please describe what you're trying to accomplish.
+      placeholder: I'm always frustrated when... / It would be helpful if...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution or feature you'd like to see
+      placeholder: I would like the website to...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What specific behaviors or outcomes would make this feature complete?
+      placeholder: |
+        - [ ] The feature should do X
+        - [ ] Users can access it by Y
+        - [ ] It should display Z
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: feature-area
+    attributes:
+      label: Feature Area
+      description: Which area of the application would this feature affect?
+      options:
+        - Activities Display/View
+        - Search and Filtering
+        - Student Registration
+        - Teacher Management
+        - Data/Activity Management
+        - UI/User Experience
+        - New Page/Section
+        - Other
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature?
+      options:
+        - Nice to have
+        - Would be helpful
+        - Important for usability
+        - Critical for operations
+    validations:
+      required: true
+      
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: Have you considered any alternative solutions or workarounds?
+      placeholder: Another approach could be...
+    validations:
+      required: false
+      
+  - type: textarea
+    id: technical-hints
+    attributes:
+      label: Technical Hints or Suggestions
+      description: Do you have any technical suggestions for implementation? (Optional, but helpful for developers)
+      placeholder: |
+        - This might require changes to database.py
+        - Could use existing filter pattern from...
+        - Similar to how X feature works
+    validations:
+      required: false
+      
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, mockups, or examples
+      placeholder: Any additional information...
+    validations:
+      required: false

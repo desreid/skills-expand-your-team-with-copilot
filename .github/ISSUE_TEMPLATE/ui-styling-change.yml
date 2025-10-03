@@ -1,0 +1,110 @@
+name: 🎨 UI/Styling Change
+description: Request changes to colors, layout, design, or visual appearance
+title: "[UI]: "
+labels: ["ui", "enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request visual or styling changes to the website. Please be specific about what you want changed and why.
+        
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current State
+      description: Describe what the current UI/styling looks like
+      placeholder: Currently, the website has... / The colors are...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: desired-state
+    attributes:
+      label: Desired Changes
+      description: Describe exactly what you want to change
+      placeholder: |
+        I would like to:
+        - Change the colors from X to Y
+        - Update the layout to...
+        - Add visual elements like...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Change
+      description: Why is this change needed?
+      placeholder: This change is important because...
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: ui-element
+    attributes:
+      label: What element(s) need to be changed?
+      description: Select the primary area that needs styling changes
+      multiple: true
+      options:
+        - Header/Navigation
+        - Activity Cards
+        - Filters/Sidebar
+        - Buttons
+        - Forms/Modals
+        - Color Scheme
+        - Typography/Fonts
+        - Layout/Spacing
+        - Background
+        - Icons/Images
+        - Entire Page
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this change is complete and correct?
+      placeholder: |
+        - [ ] The color scheme uses [specific colors]
+        - [ ] The layout displays [specific arrangement]
+        - [ ] The design is responsive on mobile
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: responsive
+    attributes:
+      label: Mobile Compatibility
+      description: Should this change work on mobile devices too?
+      options:
+        - Yes, must work on mobile
+        - Desktop only is fine
+        - Not sure
+    validations:
+      required: true
+      
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or References
+      description: Provide links, screenshots, or examples of the desired look
+      placeholder: |
+        - Here's a similar design: [URL]
+        - School colors: #FFFFFF (white) and #32CD32 (lime green)
+        - Reference image: [attach or link]
+    validations:
+      required: false
+      
+  - type: textarea
+    id: files
+    attributes:
+      label: Files to Modify
+      description: If you know which files need changes, list them here (helpful but optional)
+      placeholder: |
+        - src/static/styles.css
+        - src/static/index.html
+    validations:
+      required: false
